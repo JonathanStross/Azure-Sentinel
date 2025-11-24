@@ -1,0 +1,17 @@
+{
+  "Name": "Pathlock_PLC",
+  "Author": "Pathlock Inc. - support@pathlock.com",
+  "Logo": "<img src=\"https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Logos/pathlock_logo.svg\" width=\"75px\" height=\"75px\">",
+  "Description": "The [Pathlock Cloud Event Log](https://pathlock.com/products/application-access-governance/) integration enables organizations to seamlessly forward Pathlock Cloud process events from Processes and Workflows for unified visibility and correlation across the enterprise.\n\n This connector utilizes the Common Connector Platform (CCP) framework to securely transmit log and event data while maintaining data integrity and governance. The Custom Logs solution is automatically deployed during installation, ensuring a quick and reliable setup without manual configuration steps.\n\nWith this integration, SOC and ERP security teams can:\n- Consolidate ERP-specific threat intelligence and correlate it with enterprise events in Microsoft Sentinel.\n- Automate alerting and response workflows in Microsoft Sentinel for faster mean-time-to-detect (MTTD) and mean-time-to-respond (MTTR).\n- Maintain audit readiness by demonstrating end-to-end visibility of ERP workflow activities.\n\nThis out-of-the-box connector simplifies secure event forwarding from PLC to Microsoft Sentinel—enabling centralized analysis, compliance reporting, and proactive response within your existing security ecosystem.",
+  "Workbooks": [
+  ],
+  "Analytic Rules": [
+  ],
+  "Data Connectors": [
+    "Data Connectors/Pathlock_PLC_EventLog_PUSH_CCP/Pathlock_PLC_EventLog_connectorDefinition.json"
+  ],
+  "BasePath": "C:\\Github\\Azure-Sentinel\\Solutions\\Pathlock_PLC",
+  "Version": "3.0.0",
+  "Metadata": "SolutionMetadata.json",
+  "TemplateSpec": true
+}

@@ -1,0 +1,29 @@
+{
+  "type": "Microsoft.SecurityInsights/dataConnectors",
+  "apiVersion": "2025-04-01-preview",
+  "name": "Pathlock_PLC_Polling",
+  "location": "{{location}}",
+  "kind": "Push",
+  "properties": {
+    "connectorDefinitionName": "Pathlock_PLC",
+"dcrConfig": {
+  "dataCollectionRuleId": "{{dataCollectionRuleId}}",
+  "dataCollectionEndpoint": "{{dataCollectionEndpoint}}",
+  "dataCollectionRuleImmutableId": "{{dataCollectionRuleImmutableId}}",
+  "streamName": "Custom-Pathlock_PLC_EventLog_CL"
+},
+    "auth": {
+      "type": "Push",
+      "appId": "{{appId}}",
+      "servicePrincipalId": "{{servicePrincipalId}}"
+    },
+    "request": {
+      "RetryCount": 1
+    },
+    "response": {
+      "eventsJsonPaths": [
+        "$.messages"
+      ]
+    }
+  }
+}

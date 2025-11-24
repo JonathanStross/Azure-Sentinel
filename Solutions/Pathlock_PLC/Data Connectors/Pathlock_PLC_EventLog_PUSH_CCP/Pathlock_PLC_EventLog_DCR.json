@@ -1,0 +1,42 @@
+{
+  "type": "Microsoft.Insights/dataCollectionRules",
+  "apiVersion": "2023-03-11",
+  "name": "Pathlock_PLC-DCR",
+  "location": "{{location}}",
+  "properties": {
+    "dataCollectionEndpointId": "{{dataCollectionEndpointId}}",
+    "streamDeclarations": {
+      "Custom-Pathlock_PLC_EventLog_CL": {
+        "columns": [
+            { "name": "TimeGenerated", "type": "datetime" },
+            { "name": "ID", "type": "string" },
+            { "name": "PerformedBy", "type": "string" },
+            { "name": "EventName", "type": "string" },
+            { "name": "EventDescription", "type": "string" },
+            { "name": "EventType", "type": "string" },
+            { "name": "EventMessage", "type": "string" },
+            { "name": "Severity", "type": "string" },
+            { "name": "OccuredOn", "type": "string" },
+            { "name": "SystemName", "type": "string" },
+            { "name": "AffectedUser", "type": "string" }
+        ]
+      }
+    },
+    "destinations": {
+      "logAnalytics": [
+        {
+          "name": "clv2ws1",
+          "workspaceResourceId": "{{workspaceResourceId}}"
+        }
+      ]
+    },
+    "dataFlows": [
+      {
+        "streams": [ "Custom-Pathlock_PLC_EventLog_CL" ],
+        "destinations": [ "clv2ws1" ],
+        "transformKql": "source\n",
+        "outputStream": "Custom-Pathlock_PLC_EventLog_CL"
+      }
+    ]
+  }
+}

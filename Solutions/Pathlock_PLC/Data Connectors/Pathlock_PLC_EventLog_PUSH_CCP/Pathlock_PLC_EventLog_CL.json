@@ -1,0 +1,25 @@
+{
+  "name": "Pathlock_PLC_EventLog_CL",
+  "apiVersion": "2025-02-01",
+  "type": "Microsoft.OperationalInsights/workspaces/tables",
+  "location": "{{location}}",
+  "tags": {},
+  "properties": {
+    "schema": {
+      "name": "Pathlock_PLC_EventLog_CL",
+      "columns": [
+        { "name": "TimeGenerated", "type": "datetime" },
+        { "name": "ID", "type": "string" },
+        { "name": "PerformedBy", "type": "string" },
+        { "name": "EventName", "type": "string" },
+        { "name": "EventDescription", "type": "string" },
+        { "name": "EventType", "type": "string" },
+        { "name": "EventMessage", "type": "string" },
+        { "name": "Severity", "type": "string" },
+        { "name": "OccuredOn", "type": "string" },
+        { "name": "SystemName", "type": "string" },
+        { "name": "AffectedUser", "type": "string" }
+      ]
+    }
+  }
+}
